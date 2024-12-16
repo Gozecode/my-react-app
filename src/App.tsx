@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useEffect } from "react";
 
 import NavBar from "./components/NavBar";
 
@@ -26,6 +27,7 @@ const pokemonList = [
 		name: "pikachu",
 		imgSrc:
 			"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+		popUp: "pika pikachu !!!",
 	},
 	{
 		name: "mew",
@@ -33,6 +35,9 @@ const pokemonList = [
 ];
 
 function App() {
+	useEffect(() => {
+		alert("hello pokemon trainer :)");
+	}, []);
 	const [pokemonIndex, setPokemonIndex] = useState(0);
 	return (
 		<>
